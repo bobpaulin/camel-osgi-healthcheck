@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0">
+
+  <OCD description="CamelOSGiHealthCheck" name="com.bobpaulin.camel.healthcheck.HealthcheckConfig" id="com.bobpaulin.camel.healthcheck.HealthcheckConfig">
+    <AD name="App Name"  id="appName" required="true" type="String" default="test"/>
+    <AD name="Server Hostname"  id="hostname" required="true" type="String" default="localhost"/>   
+    <AD name="Server Port"  id="port" required="true" type="String" default="80"/>
+    <AD name="Health Check Update Interval"  id="updateInterval" required="true" type="String" default="10s"/>
+    <AD name="Health Check Update TTL"  id="updateTTL" required="true" type="String" default="20"/>
+    <AD name="Health Check Status Service Name"  id="healthcheckServiceName" required="true" type="String" default="defaultHealthCheck"/>
+  </OCD>
+
+  <Designate pid="com.bobpaulin.camel.healthcheck.HealthcheckConfig">
+    <Object ocdref="com.bobpaulin.camel.healthcheck.HealthcheckConfig"/>
+  </Designate>
+
+</metatype:MetaData>
